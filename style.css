@@ -1,0 +1,161 @@
+:root{
+    --verde:#49a09d;
+    --lilas:#5f2c82;
+}
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: var(--lilas);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+main{
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#inf-ocultas{
+    display: none;
+}
+#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    background-color: white;
+    width: 250px;
+    height: 610px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+}
+#login> #imagem{
+    background:var(--lilas) url(image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    display: block;
+
+    
+}
+#login> #forms{
+    display: block;
+    padding: 10px;
+}
+
+footer{
+    display: none;
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    body{
+        background-image: linear-gradient(to top,var(--lilas), var(--verde));
+    }
+    #login{
+        width: 80vw;
+    }
+    #login>#imagem{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    #login>#forms{
+        float: right;
+        width: 70%;
+    }
+    
+}
+
+@media screen and (min-width:992px) {
+    body{
+        background-image: linear-gradient(to top,var(--lilas),  var(--verde));
+    }
+    #login{
+        width: 950px;
+        height: 60vh;
+    }
+    #login>#imagem{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    #login>#forms{
+        float: left;
+        width: 50%;
+    }
+    #login>#forms>h2{
+        padding: 10px;
+    }
+    @keyframes animacao{
+        
+        from {color:white;}
+        to{color: var(--lilas);}
+    }
+    footer{
+        display: inline;
+        color: white;
+        
+    }
+    #footer{
+        visibility: hidden;
+        
+        animation-name: animacao;
+        animation-duration: 8s;
+        }
+    
+}
+label{
+    font-size: 15px;
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    background-color: var(--verde);
+    width: 100%;
+    color: white;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+form > input[type=submit]:hover{
+
+    background-color: #3b8380;
+}
+
+form > a.botao{
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #3b8380;
+    cursor: pointer;
+    color:  #3b8380;
+    text-decoration: none;
+    margin-top:4px ;
+    
+
+}
+
+form > a.botao:hover{
+    background-color: #49a09d;
+    color: white;
+
+}
+#login{
+visibility: hidden;
+}
